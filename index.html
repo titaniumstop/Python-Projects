@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Game - Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud" class="hud">
+            <div class="health-bar-container">
+                <div class="health-bar" id="healthBar">
+                    <span class="health-text" id="healthText">Health: 100</span>
+                </div>
+            </div>
+            <div class="hud-info">
+                <div class="info-item">Ammo: <span id="ammoDisplay">30</span></div>
+                <div class="info-item">Score: <span id="scoreDisplay">0</span></div>
+                <div class="info-item">Enemies: <span id="enemiesDisplay">0</span></div>
+            </div>
+            <div class="crosshair"></div>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h1>GAME OVER</h1>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+    <div class="controls-info">
+        <p>WASD to move | Mouse to aim | Left Click to shoot | R to reload</p>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
